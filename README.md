@@ -2,7 +2,7 @@
 This ROS package is a practice for controlling the TurtleBot3 to move in an elliptic path.
 
 
-## How to run the code
+## Ready to run the code
 The first step is to make a workspace directory 
 > mkdir -p catkin_ws/src 
 > 
@@ -27,7 +27,9 @@ And build the code
 >
 > catkin_make
 
-Setup the model name of turtlebot3. I used it for waffle_pi
+
+## How to run this package
+Select the model name of turtlebot3. I used model for waffle_pi
 > export TURTLEBOT3_MODEL=waffle_pi
 
 Run the gazebo environment that will operate the turtlebot3.
