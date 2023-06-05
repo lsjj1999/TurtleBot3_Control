@@ -1,8 +1,8 @@
-## TurtleBot3_Control
+# TurtleBot3_Control
 This ROS package is a practice for controlling the TurtleBot3 to move in an elliptic path.
 
 
-# How to install the dependency packages and run the code
+## How to run the code
 The first step is to make a workspace directory 
 > mkdir -p catkin_ws/src 
 > 
@@ -27,30 +27,29 @@ And build the code
 >
 > catkin_make
 
-If you don't have package of PID, ~~
-할거
-pid 패키지 다운받는걸로 옮기기
+Setup the model name of turtlebot3. I used it for waffle_pi
+> export TURTLEBOT3_MODEL=waffle_pi
 
-
-export TURTLEBOT3_MODEL=waffle_pi
-
-run gazebo
+Run the gazebo environment that will operate the turtlebot3.
 > roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
 
-run rviz
+Open another terminal and run rviz
 > roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch
 
-run controller based on your choice
+Open another terminal and run controller based on your choice
 > cd catkin_ws/src/TurtleBot3_Control/src
+
+If you want to run PID and pure-pursuit control
 > python3 controller_pidppc.py
-or
+
+If you want to run only PID control
 > python3 controller_pid.py
-or
+
+If you want to run only pure-pursuit control
 > python3 controller_ppc.py
 
 
-
-# Reference
+## Reference
 Ellipse path generation
 https://github.com/sugbuv/path_planning.git
 
