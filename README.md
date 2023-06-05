@@ -4,7 +4,7 @@ This ROS package is a practice for controlling the TurtleBot3 to move in an elli
 
 ## Ready to run the code
 The first step is to make a workspace directory 
-> mkdir -p catkin_ws/src 
+> `mkdir -p catkin_ws/src`
 > 
 > cd catkin_ws/src
 >
