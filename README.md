@@ -4,20 +4,26 @@ This ROS package is a practice for controlling the TurtleBot3 to move in an elli
 
 ## Ready to run the code
 The first step is to make a workspace directory 
-> `mkdir -p catkin_ws/src`
+> mkdir -p catkin_ws/src
+> 
 > cd catkin_ws/src
+> 
 > source /opt/ros/noetic/setup.bash
+> 
 > catkin_init_workspace
 
 Then download dependency packages about running turtlebot3
 > sudo apt install ros-noetic-turtlebot3-msgs
 
 > sudo apt install ros-noetic-turtlebot3
+> 
 > git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+> 
 > git clone https://github.com/lsjj1999/TurtleBot3_Control.git
 
 And build the code
 > cd ..
+> 
 > catkin_make
 
 
