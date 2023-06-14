@@ -30,25 +30,25 @@ And build the code
 
 ## How to run this package
 Select the model name of turtlebot3. I used model for waffle_pi
-> export TURTLEBOT3_MODEL=waffle_pi
+> `export TURTLEBOT3_MODEL=waffle_pi`
 
 Run the gazebo environment that will operate the turtlebot3.
-> roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
+> `roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch`
 
 Open another terminal and run rviz
-> roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch
+> `roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch`
 
 Open another terminal and run controller based on your choice
-> cd catkin_ws/src/TurtleBot3_Control/src
+> `cd catkin_ws/src/TurtleBot3_Control/src`
 
 If you want to run PID and pure-pursuit control
-> python3 controller_pidppc.py
+> `python3 controller_pidppc.py`
 
 If you want to run only PID control
-> python3 controller_pid.py
+> `python3 controller_pid.py`
 
 If you want to run only pure-pursuit control
-> python3 controller_ppc.py
+> `python3 controller_ppc.py`
 
 
 ## Reference
