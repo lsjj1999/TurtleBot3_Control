@@ -14,8 +14,10 @@ The first step is to make a workspace directory
 
 Then download dependency packages about running turtlebot3
 > sudo apt install ros-noetic-turtlebot3-msgs
-
+>
 > sudo apt install ros-noetic-turtlebot3
+> 
+> pip3 install simple_pid
 >
 > git clone https://github.com/ROBOTIS-GIT/turtlebot3
 >
