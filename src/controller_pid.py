@@ -90,20 +90,21 @@ while not flag and not rospy.is_shutdown():
     # speed.angular.z = steer
 
     distance_to_goal = dist(ref[l_idx], [x,y])
-    # speed.linear.x = 0.5
-    speed.linear.x = pid_distance(-distance_to_goal)
     
+    speed.linear.x = pid_distance(-distance_to_goal)
+    speed.linear.x = 0.5
     # print(ref[l_idx],[x,y])
 
     angle_to_goal = atan2(ref[l_idx][1] - y, ref[l_idx][0] - x)
     # angle_to_goal = np.arctan2(ref[l_idx][0], ref[l_idx][1], x, y)
     # angle_to_goal = np.arctan2(ref[l_idx][0], ref[l_idx][1]) - np.arctan2(x, y)
-    print(ref[l_idx], theta - angle_to_goal,pid_angle(theta-angle_to_goal))
+    # print(ref[l_idx], theta - angle_to_goal,pid_angle(theta-angle_to_goal))
     if abs(angle_to_goal-theta) > 0.1:
         angle = pid_angle(theta-angle_to_goal)
         # angle = theta-angle_to_goal
-    # else:
-    #     angle = 0
+        speed.linear.x = 0
+    else:
+        angle = 0
 
     speed.angular.z = angle
     pub.publish(speed)
@@ -134,10 +135,5 @@ plt.clf()
 plt.plot(ref[:,0],ref[:,1],"*r", markersize = 1)
 plt.plot(x_path, y_path)
 plt.title('Fusion path')
-plt.grid(True)
-plt.show()
-
-# Velocity graph
-plt.plot(t,vel)
 plt.grid(True)
 plt.show()

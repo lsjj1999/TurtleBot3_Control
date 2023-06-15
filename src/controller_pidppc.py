@@ -84,14 +84,14 @@ while not flag:
         actions.append([steer, velocity])
     actions = np.array(actions)
     speed.angular.z = steer
-    print(steer)
+    # print(steer)
 
     distance_to_goal = dist(ref[l_idx], [x,y])
     speed.linear.x = pid_distance(-distance_to_goal)
     pub.publish(speed)
 
-    print(_l_idx, l_idx, lap, x_vel)
-    if _l_idx - l_idx > 61:
+    # print(_l_idx, l_idx, lap, x_vel)
+    if _l_idx - l_idx >= 61:
         lap = lap + 1
         if lap == 1:
             flag = True
@@ -122,5 +122,6 @@ plt.show()
 
 # Velocity graph
 plt.plot(t,vel)
+plt.title('velocity graph')
 plt.grid(True)
 plt.show()

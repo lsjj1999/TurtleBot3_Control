@@ -74,7 +74,8 @@ while not flag:
     actions = np.array(actions)
 
     # print(_l_idx, l_idx, lap)
-    if _l_idx == 62 and l_idx == 0:
+    a = _l_idx - l_idx
+    if a >= 61:
         lap = lap + 1
         if lap == 1:
             flag = True
