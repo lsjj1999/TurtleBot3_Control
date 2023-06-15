@@ -16,7 +16,11 @@ Then download dependency packages about running turtlebot3
 > sudo apt install ros-noetic-turtlebot3-msgs
 
 > sudo apt install ros-noetic-turtlebot3
-> 
+>
+> git clone https://github.com/ROBOTIS-GIT/turtlebot3
+>
+> git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs
+>
 > git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 > 
 > git clone https://github.com/lsjj1999/TurtleBot3_Control.git
