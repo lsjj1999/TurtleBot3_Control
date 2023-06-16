@@ -12,7 +12,7 @@ The first step is to make a workspace directory
 > 
 > catkin_init_workspace
 
-Then download dependency packages about running turtlebot3
+Download dependency packages about running Turtlebot
 > sudo apt install ros-noetic-turtlebot3-msgs
 >
 > sudo apt install ros-noetic-turtlebot3
@@ -23,21 +23,21 @@ Then download dependency packages about running turtlebot3
 >
 > git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs
 >
-> git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+> git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 > 
 > git clone https://github.com/lsjj1999/TurtleBot3_Control.git
 
-And build the code
+Build the code
 > cd ..
 > 
 > catkin_make
 
 
 ## How to run package
-Select the model name of turtlebot3. I used model for waffle_pi
+Select the model name of Turtlebot. I used model for waffle_pi
 > export TURTLEBOT3_MODEL=waffle_pi
 
-Run the gazebo environment that will operate the turtlebot3.
+Run the gazebo environment that will operate the Turtlebot.
 > roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
 
 Open another terminal and run rviz program
@@ -61,16 +61,17 @@ If you run the background environment, you can see the gazebo and rviz program f
 ![스크린샷, 2023-06-15 13-08-59+](https://github.com/lsjj1999/TurtleBot3_Control/assets/45039229/4fc14e3a-89b8-4391-a763-d04d6636ef25)
 
 
-If you run the code, you can check the reference point and the location of the current turtle bot displayed in real time.
+If you run the code, you can check the reference point and the location of the current Turtlebot displayed in real time.
+
 ![Figure_1](https://github.com/lsjj1999/TurtleBot3_Control/assets/45039229/dc0efe0d-c52c-4c51-8ed8-4c352c6395a5)
 
 
-After one lap of turtlebot and it goes near to the initial point, the code terminated then and plot the graph of whole trajectory.
+After one lap of Turtlebot and it goes near to the initial point, code terminated and then plot the graph of whole trajectory.
 
 ![ppc](https://github.com/lsjj1999/TurtleBot3_Control/assets/45039229/55dcae50-b6dc-4997-96b6-cf020bb403d0)
 
 
-And in the case of controller_pidppc.py, it also plots velocity graph of turtlebot.
+And in the case of controller_pidppc.py, it also plots velocity graph of Turtlebot.
 
 ![pidppcvel](https://github.com/lsjj1999/TurtleBot3_Control/assets/45039229/a5ec7ec4-0035-4842-8aac-cd0715dce9fc)
 
