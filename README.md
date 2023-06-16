@@ -62,6 +62,7 @@ If you run the background environment, you can see the gazebo and rviz program f
 
 
 If you run the code, you can check the reference point and the location of the current turtle bot displayed in real time.
+![Figure_1](https://github.com/lsjj1999/TurtleBot3_Control/assets/45039229/dc0efe0d-c52c-4c51-8ed8-4c352c6395a5)
 
 
 After one lap of turtlebot and it goes near to the initial point, the code terminated then and plot the graph of whole trajectory.
